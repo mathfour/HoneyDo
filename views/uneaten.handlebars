@@ -1,4 +1,11 @@
+<p>This is the uneaten list</p>
 
-<!--{{#each uneatenBurger}}-->
-    {{burgerName}}
-<!--{{/each}}-->
+<ul>
+{{#each burgers}}
+    <li>
+        {{id}}. {{food}}
+            <button class='eat-in-database' id={{id}}>eat me</button>
+        </button>
+    </li>
+{{/each}}
+</ul>
