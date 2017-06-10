@@ -8,7 +8,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mathfour/burger-muncher.git"
+    "url": "git+https://github.com/mathfour/burger-muncher.git",
+    "start": "node server.js"
   },
   "author": "Bon Crowder",
   "license": "ISC",

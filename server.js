@@ -7,7 +7,7 @@ var methodOverride = require("method-override");
 
 var path = require("path");
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 var exphbs = require("express-handlebars");
@@ -24,6 +24,8 @@ var router = require("./controllers/burgerControllerRouter.js");
 app.use("/", router);
 
 // Initiate the listener
-app.listen(PORT);
+app.listen(PORT, function () {
+    console.log('listening on port', PORT);
+});
 
 
