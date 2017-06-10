@@ -3,18 +3,33 @@
 <p>image of burger or something</p>
 
 <p>instructions</p>
-<hr />
-<div id="uneatenList" class="leftSide">
+<hr/>
+<div id="uneatenList"
+     class="leftSide">
     <p>inside the index UNeaten</p>
     {{uneaten}}
+    <ul>
+        {{#each uneatenBurgers}}
+            <li>
+                {{id}}. {{food}}
+                <button class='eat-in-database'
+                        id={{id}}>eat me
+                </button>
+                </button>
+            </li>
+        {{/each}}
+    </ul>
 </div>
-<hr />
-<div id="eatenList" class="rightSide">
+<hr/>
+<div id="eatenList"
+     class="rightSide">
     <p>inside the index EATEN</p>
-    {{eaten}}
+    {{#each eatenBurgers}}
+        {{id}}. {{food}}
+    {{/each}}
 </div>
 
-<hr />
+<hr/>
 
 <div id="inputArea">
     {{inputBurgerHere}}

@@ -5,7 +5,7 @@ var connection = require('./connection.js');
 
 
 var orm = {
-    allUneaten: function (tableName, colName, colValue, callback) {
+    allBurgers: function (tableName, colName, colValue, callback) {
         var mysqlQueryString = 'SELECT * FROM ' + tableName + ' WHERE ' + colName + ' = ' + colValue + ';';
 
         connection.query(mysqlQueryString, function (error, result) {
@@ -13,7 +13,7 @@ var orm = {
                 throw error;
             }
             callback(result);
-            // res.render('uneaten', {uneatenBurgers: result});
+            // response.render('uneaten', {uneatenBurgers: result});
         });
     }
     // allEaten: function (param1, param2, cb) {

@@ -8,34 +8,29 @@ var router = express.Router();
 var burger = require('../models/burger.js');
 
 router.get('/', function (request, response) {
-   burger.allUneaten(function (data) {
-      var sendViaHandlebars = {
-          burgers: data
-      };
-      response.render('uneaten', sendViaHandlebars);
-   });
-});
+    var handlebarsObject = {};
 
-router.get('/', function (request, response) {
-   burger.allEaten(function (data) {
-      var sendViaHandlebars = {
-          burgers: data
-      };
-      response.render('eaten', sendViaHandlebars);
-   });
+    burger.allUneaten(function (data) {
+        handlebarsObject.uneatenBurgers = data;
+        burger.allEaten(function (data) {
+            handlebarsObject.eatenBurgers = data;
+            console.log(handlebarsObject);
+            response.render('index', handlebarsObject);
+        });
+    });
 });
 
 router.post('/', function (request, response) {
-   burger.createBurger(food, request.body.name, function () {
-      response.redirect('/');
-   });
+    burger.createBurger(food, request.body.name, function () {
+        response.redirect('/');
+    });
 });
 
 router.put('/:id', function (request, response) {
 
-   // bmc: the cats one has req.params.id, not body (hmm)
+    // bmc: the cats one has req.params.id, not body (hmm)
     burger.eatThisBurger(request.body.id, function () {
-       response.redirect('/');
+        response.redirect('/');
     });
 });
 
