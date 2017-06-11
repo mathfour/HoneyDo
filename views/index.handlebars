@@ -1,12 +1,15 @@
 <h1>Burger Muncher</h1>
 
-<p>image of burger or something</p>
+<div class="image">
+    <img src="assets/images/Burger-Muncher-Image.png">
+</div>
 
-<p>instructions</p>
-<hr/>
+<p>Enter a burger and watch it show up in the "Uneaten Burgers" list. Then click on "eat me" to
+    enjoy it - and have it move to the "Eaten Burgers" list.</p>
+<hr />
 <div id="uneatenList"
      class="leftSide">
-    <p>inside the index UNeaten</p>
+    <h2>These burgers are available.</h2>
     {{uneaten}}
     <ul>
         {{#each uneatenBurgers}}
@@ -15,23 +18,42 @@
                 <button class='eat-in-database'
                         id={{id}}>eat me
                 </button>
-                </button>
             </li>
         {{/each}}
     </ul>
 </div>
-<hr/>
 <div id="eatenList"
      class="rightSide">
-    <p>inside the index EATEN</p>
-    {{#each eatenBurgers}}
-        {{id}}. {{food}}
-    {{/each}}
+    <h2>These burgers have been eaten!</h2>
+    <ul>
+        {{#each eatenBurgers}}
+            <li>
+                {{id}}. {{food}}
+            </li>
+        {{/each}}
+    </ul>
 </div>
 
-<hr/>
 
 <div id="inputArea">
-    {{inputBurgerHere}}
+    <hr />
+<h2>Add a Burger</h2>
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="burgerName">Name your burger:</label>
+      <br />
+    <input type="text" id="burgerName" name="name">
+  </div>
+
+  <!--<div class="form-group">-->
+    <!--<label for="slee">Sleepy?</label><br>-->
+    <!--<input type="radio" name="sleepy" value="1" checked> Sleepy!<br>-->
+    <!--<input type="radio" name="sleepy" value="0"> Awake-->
+  <!--</div>-->
+
+  <button type="submit">Add Burger</button>
+</form>
 </div>
+<hr />
 

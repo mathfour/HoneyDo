@@ -15,7 +15,8 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(methodOverride("_method"));
 // Routes
 // bmc: need to import them from controllers/burgerControllerRouter.js
 

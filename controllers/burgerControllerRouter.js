@@ -21,7 +21,8 @@ router.get('/', function (request, response) {
 });
 
 router.post('/', function (request, response) {
-    burger.createBurger(food, request.body.name, function () {
+    console.log('request.body is', request.body);
+    burger.createBurger(request.body.name, function () {
         response.redirect('/');
     });
 });

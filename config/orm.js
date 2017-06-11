@@ -13,14 +13,19 @@ var orm = {
                 throw error;
             }
             callback(result);
-            // response.render('uneaten', {uneatenBurgers: result});
+        });
+    },
+    createBurger: function (burgerName, callback) {
+        console.log('burger name is', burgerName);
+        var mysqlQueryString = 'INSERT INTO burgers (food) VALUES (?);';
+
+        connection.query(mysqlQueryString, burgerName, function (error, result) {
+            if (error) {
+                throw error;
+            }
+            callback(result);
         });
     }
-    // allEaten: function (param1, param2, cb) {
-    //     console.log(param1, param2);
-    //     cb();
-    // }
 };
 
 module.exports = orm;
-// bmc:

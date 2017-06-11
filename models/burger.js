@@ -14,8 +14,11 @@ var burger = {
          // bmc: list eaten burgers
         console.log('you ate these burgers');
     },
-    createBurger: function (columns, values, callback) {
+    createBurger: function (burgerName, callback) {
        // bmc: insert burger into database
+        orm.createBurger(burgerName, function (response) {
+           callback(response);
+        });
     },
     eatThisBurger: function (id, callback) {
        // bmc: update burger to be eaten = true
