@@ -28,9 +28,9 @@ router.post('/', function (request, response) {
 });
 
 router.put('/:id', function (request, response) {
-
+    console.log(request.params);
     // bmc: the cats one has req.params.id, not body (hmm)
-    burger.eatThisBurger(request.body.id, function () {
+    burger.eatThisBurger(request.params.id, function () {
         response.redirect('/');
     });
 });

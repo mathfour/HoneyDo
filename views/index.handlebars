@@ -15,9 +15,11 @@
         {{#each uneatenBurgers}}
             <li>
                 {{id}}. {{food}}
+                <form action="/{{id}}?_method=PUT" method="POST">
                 <button class='eat-in-database'
                         id={{id}}>eat me
                 </button>
+                </form>
             </li>
         {{/each}}
     </ul>

@@ -25,6 +25,17 @@ var orm = {
             }
             callback(result);
         });
+    },
+    eatThisBurger: function (burgerID, callback) {
+        console.log('burger ID is', burgerID);
+        var mysqlQueryString = "UPDATE burgers SET eaten=true WHERE id=" + burgerID + ";";
+
+        connection.query(mysqlQueryString, function (err, result) {
+            if (err) {
+                throw err;
+            }
+            callback(result);
+        });
     }
 };
 
