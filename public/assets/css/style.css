@@ -1,7 +1,10 @@
 body {
     width: auto;
     margin: 10px 15% 100px 15%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
 }
+
 img {
     width: 100%;
 }
@@ -32,10 +35,21 @@ h2 {
 #inputArea {
     clear: both;
     text-align: center;
+    line-height: 2em;
 }
 
 ul {
     list-style-type: none;
     padding-left:0;
     text-align: center;
+    line-height: 1.5em;
+}
+
+button {
+    font-size: large;
+}
+
+input#burgerName {
+    font-size: 18px;
+    width: 300px;
 }
