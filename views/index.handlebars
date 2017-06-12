@@ -10,7 +10,8 @@
 <div id="uneatenList"
      class="leftSide">
     <h2>Uneaten Burgers</h2>
-    <table style="width:100%">
+    <table>
+        <!-- bmc: handlebars #each will loop through all the uneatenBurgers in the database -->
         {{#each uneatenBurgers}}
             <tr>
                 <td>
@@ -19,6 +20,7 @@
                 <td>
                     <form action="/{{id}}?_method=PUT"
                           method="POST">
+                        <!-- bmc: button will launch the put method to change the eaten column in the database to true -->
                         <button class='eat-in-database'
                                 id={{id}}>eat me
                         </button>
@@ -35,6 +37,7 @@
      class="rightSide">
     <h2>Eaten Burgers</h2>
     <ul>
+        <!-- bmc: list of eaten burgers like the list of uneaten ones above -->
         {{#each eatenBurgers}}
             <li>
                 {{id}}. {{food}}
@@ -43,10 +46,10 @@
     </ul>
 </div>
 
-
 <div id="inputArea">
     <hr/>
     <h2>Add a Burger</h2>
+    <!-- bmc: this form captures a burger name and inserts it into the database as an uneaten burger -->
     <form class="create-update-form"
           action="/"
           method="POST">
@@ -59,13 +62,7 @@
                    name="name">
         </div>
 
-        <!--<div class="form-group">-->
-        <!--<label for="slee">Sleepy?</label><br>-->
-        <!--<input type="radio" name="sleepy" value="1" checked> Sleepy!<br>-->
-        <!--<input type="radio" name="sleepy" value="0"> Awake-->
-        <!--</div>-->
-
-        <button type="submit">Add Burger</button>
+        <button type="submit">add burger</button>
     </form>
 </div>
 <hr/>

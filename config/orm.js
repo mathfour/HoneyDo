@@ -3,7 +3,6 @@
 
 var connection = require('./connection.js');
 
-
 var orm = {
     allBurgers: function (tableName, colName, colValue, callback) {
         var mysqlQueryString = 'SELECT * FROM ' + tableName + ' WHERE ' + colName + ' = ' + colValue + ';';
