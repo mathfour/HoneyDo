@@ -1,0 +1,69 @@
+<h1>Burger Muncher</h1>
+
+<div class="image">
+    <img src="assets/images/Burger-Muncher-Image.png">
+</div>
+
+<p>Enter a burger and watch it show up in the "Uneaten Burgers" list. Then click on "eat me" to
+    enjoy it - and have it move to the "Eaten Burgers" list.</p>
+<hr/>
+<div id="uneatenList"
+     class="leftSide">
+    <h2>Uneaten Burgers</h2>
+    <table>
+        <!-- bmc: handlebars #each will loop through all the uneatenBurgers in the database -->
+        {{#each uneatenBurgers}}
+            <tr>
+                <td>
+                    {{id}}. {{food}}
+                </td>
+                <td>
+                    <form action="/{{id}}?_method=PUT"
+                          method="POST">
+                        <!-- bmc: button will launch the put method to change the eaten column in the database to true -->
+                        <button class='eat-in-database'
+                                id={{id}}>eat me
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+    <ul>
+
+    </ul>
+</div>
+<div id="eatenList"
+     class="rightSide">
+    <h2>Eaten Burgers</h2>
+    <ul>
+        <!-- bmc: list of eaten burgers like the list of uneaten ones above -->
+        {{#each eatenBurgers}}
+            <li>
+                {{id}}. {{food}}
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+<div id="inputArea">
+    <hr/>
+    <h2>Add a Burger</h2>
+    <!-- bmc: this form captures a burger name and inserts it into the database as an uneaten burger -->
+    <form class="create-update-form"
+          action="/"
+          method="POST">
+
+        <div class="form-group">
+            <label for="burgerName">Name your burger:</label>
+            <br/>
+            <input type="text"
+                   id="burgerName"
+                   name="name">
+        </div>
+
+        <button type="submit">add burger</button>
+    </form>
+</div>
+<hr/>
+

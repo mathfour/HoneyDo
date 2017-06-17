@@ -1,0 +1,28 @@
+{
+  "name": "burger-muncher",
+  "version": "1.0.0",
+  "description": "*Burger Muncher* is a Node/Express JS app using Handlebars and mySQL that allows the user to input a burger then eat it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathfour/burger-muncher.git",
+    "start": "node server.js"
+  },
+  "author": "Bon Crowder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathfour/burger-muncher/issues"
+  },
+  "homepage": "https://github.com/mathfour/burger-muncher#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.9",
+    "mysql": "^2.13.0",
+    "path": "^0.12.7"
+  }
+}
