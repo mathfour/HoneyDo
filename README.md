@@ -5,13 +5,25 @@
 
 You can run the app on [Heroku](https://tranquil-journey-54558.herokuapp.com/).
 
-Note: the database is not just used for you, but for all. So keep your tasks clean! (If you want it all for yourself, fork it. :D)
+Note: the database is not just used for you, but for all. So keep your tasks clean! (If you want it all for yourself, see the "Make it Your Own" instructions below. :D)
 
  You can find the source files at [https://github.com/mathfour/honeydo](https://github.com/mathfour/honeydo)
 
 ## How to Use the App: Create a DO, then DO it!
 
 Fill out a task (a DO) and click *Add this DO to the List*. Your DO will show up on the left. Click the *This DO is Done!* button and it will be marked completed - and put in the Done DOs column!
+
+## Make it Your Own
+
+Clone this repo to your desktop and change to the `honeydo` directory. (If it's your first time to clone, check out the instructions [here](https://help.github.com/articles/cloning-a-repository/). Run `npm install` to install its dependencies.
+
+Change the password in the `config.json` file to be your root password.
+
+Create a mySQL database called `i_hate_burgers` (long story on that one) and then run the app with `npm start`.
+
+Switch to your browser and type `localhost:3000` in the address bar.
+
+Now you're set!
 
 ## Technology Used
 
@@ -34,6 +46,11 @@ Fill out a task (a DO) and click *Add this DO to the List*. Your DO will show up
 - [path](https://www.npmjs.com/package/path)
 - [sequelize](https://www.npmjs.com/package/sequelize)
 - [sequelize-cli](https://www.npmjs.com/package/sequelize-cli)
+
+## Next Steps
+
+
+
 
 ## Acknowldegments
 
