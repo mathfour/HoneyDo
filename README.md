@@ -1,4 +1,6 @@
+![HoneyDoListLogo_1](public/assets/images/HoneyDoListLogo_1.png)
 # Honey Do List
+
 *Honey Do List* is a Node/Express JS app using Handlebars, mySQL and Sequelize that allows the user to input a task (a 'do') then mark it completed.
 
 You can run the app on [Heroku](https://tranquil-journey-54558.herokuapp.com/).
