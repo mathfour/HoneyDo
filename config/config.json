@@ -18,6 +18,7 @@
     "password": "nt3tjvelt8goj91i",
     "database": "i_hate_burgers",
     "host": "lmag6s0zwmcswp5w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "use_env_variable": "JAWSDB_URL"
   }
 }
