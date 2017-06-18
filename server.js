@@ -3,7 +3,7 @@
  */
 var express = require("express");
 var bodyParser = require("body-parser");
-// var methodOverride = require("method-override");
+var methodOverride = require("method-override");
 
 var path = require("path");
 
@@ -17,7 +17,7 @@ app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 app.use(express.static(path.join(__dirname, 'public')));
 // app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(methodOverride("_method"));
+app.use(methodOverride("_method"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());

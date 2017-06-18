@@ -6,20 +6,20 @@ var db = require('../models');
 
 module.exports = function (app) {
     app.get('/', function (req, res) {
-        db.HoneyDoTask.findAll({
+        db.Burgers.findAll({
             where: {
                 done: false
             }
-        }).then(function (dbDos) {
-            console.log('result of promise', dbDos);
-            res.render('index', dbDos);
+        }).then(function (burgers) {
+            console.log('result of promise', burgers);
+            res.render('index', burgers);
         })
     });
 
     app.post('/add', function (req, res) {
-        db.HoneyDoTask.create(req.body.name).then(function (dbDo) {
-            console.log(dbDo);
-            res.json(dbDo);
+        db.Burgers.create(req.body.name).then(function (burgers) {
+            console.log(burgers);
+            res.json(burgers);
         })
     })
 };

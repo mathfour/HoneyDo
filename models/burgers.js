@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var HoneyDoTask = sequelize.define("HoneyDoTask", {
+    var Burgers = sequelize.define("Burgers", {
         task: {
             type: DataTypes.STRING
         },
@@ -8,6 +8,6 @@ module.exports = function (sequelize, DataTypes) {
             defaultValue: false
         }
     });
-    return HoneyDoTask;
+    return Burgers;
 };
 
