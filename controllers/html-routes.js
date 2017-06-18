@@ -23,8 +23,8 @@ module.exports = function (app) {
             res.redirect('/');
         })
     });
-    app.put('/:id', function (res, req) {
-        console.log('the req.body is', req.body);
+    app.put('/:id', function (req, res){
+        // console.log('the req.body is', res.body);
         db.Burger.update({
                     eaten: true
                 },
