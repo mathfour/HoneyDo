@@ -1,15 +1,15 @@
-<h1>Burger Muncher</h1>
+<h1>Honey Do List</h1>
 
 <div class="image">
-    <img src="assets/images/Burger-Muncher-Image.png">
+    <img src="assets/images/HoneyDoListLogo.png">
 </div>
 
-<p>Enter a burger and watch it show up in the "Uneaten Burgers" list. Then click on "eat me" to
-    enjoy it - and have it move to the "Eaten Burgers" list.</p>
+<p>Enter the DO (the task) that you'd like your honey to do.
+    <br />When it's done, click on the done button to move the DO into the Done pile.</p>
 <hr/>
 <div id="uneatenList"
      class="leftSide">
-    <h2>Uneaten Burgers</h2>
+    <h2>DO That Needs Doing</h2>
     <table>
         <!-- bmc: handlebars #each will loop through all the uneatenBurgers in the database -->
         {{#each burger}}
@@ -25,7 +25,7 @@
                               method="POST">
                             <!-- bmc: button will launch the put method to change the eaten column in the database to true -->
                             <button class='eat-in-database'
-                                    id={{this.id}}>eat me
+                                    id={{this.id}}>This DO is Done!
                             </button>
                         </form>
                     </td>
@@ -39,7 +39,7 @@
 </div>
 <div id="eatenList"
      class="rightSide">
-    <h2>Eaten Burgers</h2>
+    <h2>All the DO That's Done</h2>
     <ul>
         <!-- bmc: list of eaten burgers like the list of uneaten ones above -->
         {{#each burger}}
@@ -55,21 +55,21 @@
 
 <div id="inputArea">
     <hr/>
-    <h2>Add a Burger</h2>
+    <h2>Add a DO to be Done</h2>
     <!-- bmc: this form captures a burger name and inserts it into the database as an uneaten burger -->
     <form class="create-update-form"
           action="/add"
           method="POST">
 
         <div class="form-group">
-            <label for="burgerName">Name your burger:</label>
+            <label for="burgerName">What DO do you need done?</label>
             <br/>
             <input type="text"
                    id="burgerName"
                    name="name">
         </div>
 
-        <button type="submit">add burger</button>
+        <button type="submit">Add this DO to the List</button>
     </form>
 </div>
 <hr/>
