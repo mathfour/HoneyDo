@@ -33,10 +33,9 @@ require('./controllers/html-routes.js')(app);
 // app.use("/", router);
 
 // Initiate the listener
-db.sequelize.sync({force: true}).then(function () {
+db.sequelize.sync({force: false}).then(function () {
+    // bmc: force: true deletes the table so you can start over
     app.listen(PORT, function () {
         console.log('listening on port', PORT);
     });
 });
-
-

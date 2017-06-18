@@ -6,20 +6,35 @@ var db = require('../models');
 
 module.exports = function (app) {
     app.get('/', function (req, res) {
-        db.Burgers.findAll({
-            where: {
-                done: false
-            }
-        }).then(function (burgers) {
-            console.log('result of promise', burgers);
-            res.render('index', burgers);
+        db.Burger.findAll({}).then(function (burgers) {
+            var objectRach = {burger: burgers};
+            res.render('index', objectRach);
         })
     });
 
     app.post('/add', function (req, res) {
-        db.Burgers.create(req.body.name).then(function (burgers) {
-            console.log(burgers);
-            res.json(burgers);
+
+        console.log('req.body is', req.body);
+
+        db.Burger.create({
+            food: req.body.name
+        }).then(function (burgers) {
+            // console.log(burgers);
+            res.redirect('/');
+        })
+    });
+    app.put('/:id', function (res, req) {
+        console.log('the req.body is', req.body);
+        db.Burger.update({
+                    eaten: true
+                },
+                {
+                    where: {
+                        id: req.params.id
+                    }
+                }
+        ).then(function (burgers) {
+            res.redirect('/');
         })
     })
 };
