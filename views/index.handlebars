@@ -12,10 +12,10 @@
     <h2>Uneaten Burgers</h2>
     <table>
         <!-- bmc: handlebars #each will loop through all the uneatenBurgers in the database -->
-        {{#each uneatenBurgers}}
+        {{#each dbDos}}
             <tr>
                 <td>
-                    {{id}}. {{food}}
+                    {{id}}. {{theDo}}
                 </td>
                 <td>
                     <form action="/{{id}}?_method=PUT"
@@ -51,7 +51,7 @@
     <h2>Add a Burger</h2>
     <!-- bmc: this form captures a burger name and inserts it into the database as an uneaten burger -->
     <form class="create-update-form"
-          action="/"
+          action="/add"
           method="POST">
 
         <div class="form-group">
