@@ -33,7 +33,7 @@ Fill out a task (a DO) and click *Add this DO to the List*. Your DO will show up
 - [sequelize](https://www.npmjs.com/package/sequelize)
 - [sequelize-cli](https://www.npmjs.com/package/sequelize-cli)
 
-### Acknowldegments
+## Acknowldegments
 
 A big thanks to the following folks:
 
@@ -41,7 +41,7 @@ A big thanks to the following folks:
  - My husband who supports me tirelessly, especially on his day - Father's Day - as I fought to finish this homework.
  - My two kids who took the brunt of my frustrations in the form of extra yelling for minor offenses. Thank you both for tolerating your crazy mom.
 
-### Copyright and License
+## Copyright and License
 
 Like it? Use it and say where you got it.
 
