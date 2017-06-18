@@ -1,19 +1,20 @@
-# Burger Muncher
-*Burger Muncher* is a Node/Express JS app using Handlebars and mySQL that allows the user to input a burger then eat it.
+# Honey Do List
+*Honey Do List* is a Node/Express JS app using Handlebars, mySQL and Sequelize that allows the user to input a task (a 'do') then mark it completed.
 
-You can run the app on [Heroku](https://fierce-plateau-64986.herokuapp.com/).
+You can run the app on [Heroku](https://tranquil-journey-54558.herokuapp.com/).
 
-Note: the database is not just used for you, but for all. So keep your burgers clean!
+Note: the database is not just used for you, but for all. So keep your tasks clean! (If you want it all for yourself, fork it. :D)
 
- You can find the source files at [https://github.com/mathfour/burger-muncher](https://github.com/mathfour/burger-muncher)
+ You can find the source files at [https://github.com/mathfour/honeydo](https://github.com/mathfour/honeydo)
 
-## How to Play: Create a Burger, Eat a Burger
+## How to Use the App: Create a DO, then DO it!
 
-Fill out a burger name and click *add a burger*. Your burger will show up on the left. Click the *eat me* button on your burger or any other burger and it will be moved to the "eaten" pile.
+Fill out a task (a DO) and click *Add this DO to the List*. Your DO will show up on the left. Click the *This DO is Done!* button and it will be marked completed - and put in the Done DOs column!
 
 ## Technology Used
 
 - MySQL
+- Sequelize
 - Node
 - Express
 - Express-Handlebars
@@ -29,6 +30,16 @@ Fill out a burger name and click *add a burger*. Your burger will show up on the
 - [method-override](https://www.npmjs.com/package/method-override)
 - [mysql](https://www.npmjs.com/package/mysql)
 - [path](https://www.npmjs.com/package/path)
+- [sequelize](https://www.npmjs.com/package/sequelize)
+- [sequelize-cli](https://www.npmjs.com/package/sequelize-cli)
+
+### Acknowldegments
+
+A big thanks to the following folks:
+
+ - [Rachel Thiim](https://github.com/rxtATX) for working with me as I struggled through the wiggy challenges of Sequelize and Handlebars.
+ - My husband who supports me tirelessly, especially on his day - Father's Day - as I fought to finish this homework.
+ - My two kids who took the brunt of my frustrations in the form of extra yelling for minor offenses. Thank you both for tolerating your crazy mom.
 
 ### Copyright and License
 
