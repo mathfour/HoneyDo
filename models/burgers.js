@@ -1,9 +1,9 @@
 module.exports = function (sequelize, DataTypes) {
     var Burgers = sequelize.define("Burgers", {
-        task: {
+        food: {
             type: DataTypes.STRING
         },
-        done: {
+        eaten: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
         }
