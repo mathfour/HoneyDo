@@ -49,8 +49,7 @@ Now you're set!
 
 ## Next Steps
 
-
-
+The current deployment of this app on Heroku prohibits multiple users to enter and check off their own tasks. I'd like to set it up to be able to do that.
 
 ## Acknowldegments
 
