@@ -1,3 +1,6 @@
+* BAD WORD ALERT
+Don't open the Heroku version unless you are okay with bad words. (Egad!)
+
 ![HoneyDoListLogo_1](public/assets/images/HoneyDoListLogo_1.png)
 # Honey Do List
 
